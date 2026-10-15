@@ -5,21 +5,21 @@ class Heldkeys < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/hugomn/heldkeys/releases/download/v0.1.1/heldkeys-aarch64-apple-darwin.tar.xz"
-      sha256 "64ca6d3ce9d22dd46189c11ddd8e3e2cc4a655a2f6d638a259249bde02999a3f"
+      sha256 "fdf797ae51866127884ebf27cd6eaf32238b7235771c915a32914b7a93b3df64"
     end
     if Hardware::CPU.intel?
       url "https://github.com/hugomn/heldkeys/releases/download/v0.1.1/heldkeys-x86_64-apple-darwin.tar.xz"
-      sha256 "10daa1e0700a2aae4ce908a806ebcd9c6ff50056de0b4bf11a67db3f79198b7d"
+      sha256 "6d519d727a8b8aab2e4afb645556c747cc7b648de3c4ac951e65d545b348ba2f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/hugomn/heldkeys/releases/download/v0.1.1/heldkeys-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "698579771384df0cdc639a3908a1c58858e1592daf1b150b2c2ac517c374d4c3"
+      sha256 "7a61c6fb23deba616f7bb040740141446dc238c95e289b79bb0bb00c1a707420"
     end
     if Hardware::CPU.intel?
       url "https://github.com/hugomn/heldkeys/releases/download/v0.1.1/heldkeys-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "71c8f17a9d3d47abcbcdfeb84411f2d3cc98665ce2de3a380e597cec030bbb07"
+      sha256 "3fb1971cef15890b936196889d0216f4e1cd3eb492baeacbb635cdb40c63fd5b"
     end
   end
   license "MIT"
