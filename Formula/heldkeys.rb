@@ -1,25 +1,25 @@
 class Heldkeys < Formula
   desc "Which credentials could a hijacked AI agent use from here? Read-only, never prints a secret."
   homepage "https://github.com/hugomn/heldkeys"
-  version "0.2.1"
+  version "0.2.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-aarch64-apple-darwin.tar.xz"
-      sha256 "4de0ed2127d700cda5907fb827d09a020a1708fbfb65a5bdc54946169c396f2b"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.2/heldkeys-aarch64-apple-darwin.tar.xz"
+      sha256 "99910cc5caf0c6a779ff8f0dab0b74f49d0d82ae7d056b02a4edcc095d24b542"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-x86_64-apple-darwin.tar.xz"
-      sha256 "fd28839a799c85820a9524726c98cb0d02a5a0e1667baa6c10d548ef3529b9dc"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.2/heldkeys-x86_64-apple-darwin.tar.xz"
+      sha256 "37b4c7a745928a6139d6ee959c4b9759e7bb53964bcf8385fe03adc55ec69be0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "76fdcc29a9d4578c2c64693dc4c139e6554ab33fc962f96cb3647afb5e6148aa"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.2/heldkeys-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "39b787f93597e58a3f8729be42fd42d033b37c2bef02a850b0364bbfb19d642c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "0aeb71f11fdb400c557d83df1a22fc688e9819af1e6b8e93babb827a0bec3f84"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.2/heldkeys-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "e2dbc6655a8aff95df1e1647882f43a41e4c7329482f5ee9a0292d40e62f92b1"
     end
   end
   license "MIT"
@@ -73,5 +73,9 @@ class Heldkeys < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/heldkeys --version")
   end
 end
