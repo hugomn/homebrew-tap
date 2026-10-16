@@ -1,25 +1,25 @@
 class Heldkeys < Formula
   desc "Which credentials could a hijacked AI agent use from here? Read-only, never prints a secret."
   homepage "https://github.com/hugomn/heldkeys"
-  version "0.2.0"
+  version "0.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.0/heldkeys-aarch64-apple-darwin.tar.xz"
-      sha256 "cfad35fce41da9396c0002232881d880df530f73b4fc75b8412abe82498a6077"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-aarch64-apple-darwin.tar.xz"
+      sha256 "4de0ed2127d700cda5907fb827d09a020a1708fbfb65a5bdc54946169c396f2b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.0/heldkeys-x86_64-apple-darwin.tar.xz"
-      sha256 "fb5027ae790880d2e595d9963dce482b74131b3d8a5415a37734a2cdcaaf0602"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-x86_64-apple-darwin.tar.xz"
+      sha256 "fd28839a799c85820a9524726c98cb0d02a5a0e1667baa6c10d548ef3529b9dc"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.0/heldkeys-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "d5ffb1ea1a562e6e78255c6ffbe40cd990c3802a02f4ed87075113943d0069b9"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "76fdcc29a9d4578c2c64693dc4c139e6554ab33fc962f96cb3647afb5e6148aa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.0/heldkeys-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "de90776032ee33265490f0bad6e50e6cf47eb230a5a28c7a96b9555d38f03769"
+      url "https://github.com/hugomn/heldkeys/releases/download/v0.2.1/heldkeys-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "0aeb71f11fdb400c557d83df1a22fc688e9819af1e6b8e93babb827a0bec3f84"
     end
   end
   license "MIT"
